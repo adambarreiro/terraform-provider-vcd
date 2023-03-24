@@ -146,6 +146,8 @@ resource "vcd_rde" "rde3_tenant" {
   name         = vcd_rde.rde2_tenant.name
   resolve      = vcd_rde.rde2_tenant.resolve
   input_entity = vcd_rde.rde2_tenant.input_entity
+
+  depends_on = [vcd_rights_bundle.rde_type_bundle]
 }
 `
 
